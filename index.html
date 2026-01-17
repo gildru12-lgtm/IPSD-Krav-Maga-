@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>IPSD Krav Maga | IDT – Israeli Defense Tactics | Gil Drucker</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#000;color:#fff;line-height:1.7}
+header{
+background:linear-gradient(rgba(0,0,0,.85),rgba(0,0,0,.95)),url('kravmaga-bg.jpg') center/cover no-repeat;
+text-align:center;padding:40px 20px 120px
+}
+.logo{max-width:160px;margin-bottom:20px}
+header h1{color:#ffd700;font-size:2.6em;margin-bottom:10px}
+header h2{font-size:1.4em;margin-bottom:10px}
+header p{color:#ffd700;font-size:1.2em;margin-bottom:25px}
+.btn{background:#c00000;color:#fff;padding:15px 40px;border-radius:30px;text-decoration:none;font-size:1.2em}
+
+section{padding:70px 20px;max-width:1100px;margin:auto}
+.section-title{text-align:center;font-size:2.3em;color:#ffd700;margin-bottom:40px}
+
+.about{display:flex;flex-wrap:wrap;gap:40px;align-items:center}
+.about img{max-width:320px;border-radius:14px;border:3px solid #ffd700}
+.about-text{flex:1}
+
+.block{background:#111;padding:30px;border-radius:14px;margin-bottom:40px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.gallery div{background:#111;padding:10px;border-radius:12px;text-align:center}
+.gallery img{width:100%;border-radius:10px;border:2px solid #ffd700}
+
+form input,form textarea{width:100%;padding:14px;margin-bottom:15px;border-radius:8px;border:none}
+form button{width:100%;padding:15px;border:none;border-radius:30px;background:#c00000;color:#fff;font-size:1.1em}
+
+footer{text-align:center;padding:25px;color:#aaa}
+
+@media(max-width:768px){
+.about{flex-direction:column;text-align:center}
+header h1{font-size:2em}
+.logo{max-width:120px}
+}
+</style>
+
+<script>
+function sendWhatsApp(){
+var name=document.getElementById('name').value;
+var phone=document.getElementById('phone').value;
+var msg=document.getElementById('msg').value;
+var text="Hello Gil, my name is "+name+"%0APhone: "+phone+"%0AMessage: "+msg;
+window.open("https://wa.me/972506957922?text="+text,"_blank");
+}
+</script>
+</head>
+
+<body>
+
+<header>
+<img src="logo.png" alt="IPSD Krav Maga Logo" class="logo">
+<h1>IPSD Krav Maga | IDT</h1>
+<h2>Israeli Defense Tactics</h2>
+<p>Reality Based • Combat Proven • Effective</p>
+<a href="#contact" class="btn">Contact via WhatsApp</a>
+</header>
+
+<section>
+<h2 class="section-title">About the Instructor</h2>
+<div class="about">
+<img src="gil.png" alt="Gil Drucker">
+<div class="about-text">
+<p><strong>Gil Drucker</strong> – IPSD Krav Maga & IDT instructor with over <strong>30 years of experience</strong>.</p>
+<p>Training civilians, military personnel and security forces in Israel and worldwide.</p>
+<p>Specialized in real-life violence scenarios, knife threats, firearm situations and ground survival.</p>
+</div>
+</div>
+</section>
+
+<section>
+<h2 class="section-title">Expertise</h2>
+<div class="grid">
+<div class="block">Civilian Self Defense</div>
+<div class="block">Knife Attacks</div>
+<div class="block">Firearm Threats</div>
+<div class="block">Ground Defense</div>
+<div class="block">Women Self Defense</div>
+<div class="block">Private Training</div>
+</div>
+</section>
+
+<section>
+<h2 class="section-title">Workshops Gallery</h2>
+<div class="gallery">
+<div><img src="images/workshop1.jpg"><p>Workshop Training</p></div>
+<div><img src="images/workshop2.jpg"><p>Women Self Defense</p></div>
+<div><img src="images/workshop3.jpg"><p>Krav Maga Practice</p></div>
+<div><img src="images/workshop4.jpg"><p>Ground Defense</p></div>
+</div>
+</section>
+
+<section id="contact">
+<h2 class="section-title">Direct Contact</h2>
+<div class="block">
+<form onsubmit="sendWhatsApp();return false;">
+<input type="text" id="name" placeholder="Full Name" required>
+<input type="tel" id="phone" placeholder="Phone Number" required>
+<textarea id="msg" placeholder="What would you like to train?"></textarea>
+<button type="submit">Send via WhatsApp</button>
+</form>
+</div>
+</section>
+
+<a href="https://wa.me/972506957922" target="_blank"
+style="position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;
+width:60px;height:60px;border-radius:50%;text-align:center;font-size:30px;
+line-height:60px;text-decoration:none;">🟢</a>
+
+<footer>© Gil Drucker | IPSD Krav Maga & IDT</footer>
+
+</body>
+</html>
